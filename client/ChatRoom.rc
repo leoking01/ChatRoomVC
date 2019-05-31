@@ -1,0 +1,272 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (中国) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\ChatRoom.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""l.chs\\afxres.rc""          // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\ChatRoom.ico"
+IDI_ICON1               ICON    DISCARDABLE     "res\\01.ico"
+IDI_ICON4               ICON    DISCARDABLE     "res\\02.ico"
+IDI_ICON5               ICON    DISCARDABLE     "res\\03.ico"
+IDI_ICON6               ICON    DISCARDABLE     "res\\04.ico"
+IDI_ICON7               ICON    DISCARDABLE     "res\\05.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 235, 55
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "关于 ChatRoom"
+FONT 9, "宋体"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "ChatRoom 1.0 版",IDC_STATIC,40,10,119,8,SS_NOPREFIX
+    LTEXT           "版权所有 NUDT(C) 2011",IDC_STATIC,40,25,119,8
+    DEFPUSHBUTTON   "确定",IDOK,178,7,50,14,WS_GROUP
+END
+
+IDD_CHATROOM_DIALOG DIALOGEX 0, 0, 515, 387
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "聊天室客户端"
+FONT 9, "宋体"
+BEGIN
+    GROUPBOX        "",IDC_STATIC,7,5,501,32
+    LTEXT           "昵称：",IDC_STATIC,15,17,25,8
+    EDITTEXT        IDC_EDIT_NIKENAME,44,15,71,14,ES_AUTOHSCROLL
+    LTEXT           "聊天室IP：",IDC_STATIC,126,17,43,8
+    EDITTEXT        IDC_EDIT_ADDRESS,170,15,71,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "连接聊天服务器",IDC_ConnectButton,265,14,59,16
+    LISTBOX         IDC_LIST1,7,57,214,146,LBS_SORT | LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_EDIT_MESSAGE,45,225,178,14,ES_AUTOHSCROLL
+    LTEXT           "发言：",IDC_STATIC,14,227,25,8
+    GROUPBOX        "好友列表",IDC_STATIC,230,45,107,156
+    LISTBOX         IDC_USER,238,57,91,135,LBS_SORT | LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "发送消息",IDC_SendButton,227,224,36,14
+    PUSHBUTTON      "离开聊天室",IDC_ExitButton,458,267,50,14
+    CONTROL         "私聊",IDC_CHECK1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    229,210,32,10
+    LISTBOX         IDC_LIST2,373,56,90,141,LBS_SORT | LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_EDIT1,411,209,89,15,ES_AUTOHSCROLL
+    PUSHBUTTON      "选择文件",IDC_BUTTON1,365,209,36,14
+    PUSHBUTTON      "发送文件",IDC_BUTTON2,366,232,36,14
+    PUSHBUTTON      "将其拉黑",IDC_BUTTON3,293,203,36,14
+    PUSHBUTTON      "发送表情",IDC_BUTTON4,229,308,36,14
+    EDITTEXT        IDC_EDIT2,337,354,133,18,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT3,337,284,35,18,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT4,338,330,133,18,ES_AUTOHSCROLL
+    PUSHBUTTON      "解密",IDC_BUTTON5,337,264,36,14
+    LTEXT           "密文",IDC_STATIC,317,355,20,17
+    LTEXT           "密钥1",IDC_STATIC,313,287,20,17
+    LTEXT           "明文",IDC_STATIC,317,331,17,17
+    LTEXT           "文字消息",IDC_STATIC,15,41,69,12
+    LTEXT           "表情消息",IDC_STATIC,15,247,70,11
+    GROUPBOX        "黑名单",IDC_STATIC,370,46,97,156
+    CONTROL         "List4",IDC_LIST4,"SysListView32",LVS_SHAREIMAGELISTS | 
+                    LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,7,259,214,111
+    CONTROL         "",IDC_COMBOBOXEX1,"ComboBoxEx32",CBS_DROPDOWN | 
+                    CBS_SORT | WS_VSCROLL | WS_TABSTOP,228,279,49,96
+    EDITTEXT        IDC_EDIT5,338,307,35,18,ES_AUTOHSCROLL
+    LTEXT           "密钥2",IDC_STATIC,313,309,21,15
+    PUSHBUTTON      "加密传送",IDC_BUTTON7,269,224,36,14
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080404B0"
+        BEGIN
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "ChatRoom Microsoft 基础类应用程序\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "ChatRoom\0"
+            VALUE "LegalCopyright", "版权所有 (C) 2010\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "ChatRoom.EXE\0"
+            VALUE "ProductName", "ChatRoom 应用程序\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_CHATROOM_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 508
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 380
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// WAVE
+//
+
+IDR_NEWUSER             WAVE    DISCARDABLE     "res\\new_user.wav"
+IDR_LEAVE               WAVE    DISCARDABLE     "res\\leave.wav"
+IDR_MESSAGE             WAVE    DISCARDABLE     "res\\message.wav"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// JPG
+//
+
+IDR_JPG1                JPG     DISCARDABLE     "res\\无奈.jpg"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_BITMAP1             BITMAP  DISCARDABLE     "res\\bitmap1.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ABOUTBOX            "关于 ChatRoom(&A)..."
+    IDP_SOCKETS_INIT_FAILED "Windows 通信端口初始化失败。"
+END
+
+#endif    // Chinese (中国) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE 4, 2
+#pragma code_page(936)
+#endif //_WIN32
+#include "res\ChatRoom.rc2"  // non-Microsoft Visual C++ edited resources
+#include "l.chs\afxres.rc"          // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
